@@ -1,0 +1,11 @@
+<svg data-name="btn_ slide arrow_r" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <clipPath id="j3riwskjva">
+            <path data-name="사각형 1855" style="fill:#fff" d="M0 0h13.63v25.271H0z"/>
+        </clipPath>
+    </defs>
+    <path data-name="사각형 1994" style="fill:none" d="M0 0h30v30H0z"/>
+    <g data-name="그룹 413" transform="translate(8.37 2)" style="clip-path:url(#j3riwskjva)">
+        <path data-name="패스 3092" d="m.206 1.2 11.435 11.436L.206 24.071a.7.7 0 0 0 .994.994l12.43-12.429L1.2.206a.7.7 0 0 0-.994.994" style="fill:#fff"/>
+    </g>
+</svg>
