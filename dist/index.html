@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="../assets/lib/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../assets/lib/swiper/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/lib/fullpage/fullpage.css">
     <link rel="stylesheet" href="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
 
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
@@ -24,6 +25,7 @@
     <script src="../assets/lib/jquery-ui/jquery-ui.min.js"></script>
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/swiper/js/swiper-bundle.min.js"></script>
+    <script src="../assets/lib/fullpage/fullpage.js"></script>
     <script src="../assets/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script src="../assets/js/ui.js" defer></script>
@@ -32,27 +34,127 @@
 <body>
     <div id="wrap">
         <div id="top-banner">
-            <div class="top-banner">
-                <a href="" class="item">
-                    <img src="assets/images/top-banner-icon-1.svg" alt="">
-                    <span>선장님과 함께라면</span>
-                    <strong>우리 모두 <em class="text-primary">만선</em> 위캔피싱</strong>
-                </a>
-                <a href="" class="item">
-                    <img src="assets/images/top-banner-icon-2.svg" alt="">
-                    <span>즉석 활어회에 고기 한 쌈~까지~</span>
-                    <strong><em class="text-primary">회</em>도 먹고 <em class="text-primary">고기</em>도 먹고!!</strong>
-                </a>
-                <a href="" class="item">
-                    <img src="assets/images/top-banner-icon-3.svg" alt="">
-                    <span>바다를 바라보며 즐기는 나만의 카페</span>
-                    <strong><em class="text-primary">선상</em>에서 <em class="text-primary">커피</em> 한 잔</strong>
-                </a>
-                <a href="" class="item">
-                    <img src="assets/images/top-banner-icon-4.svg" alt="">
-                    <span>오늘의 제철로 한 가득 담아</span>
-                    <strong>해산물 <em class="text-primary">쇼핑</em></strong>
-                </a>
+            <div class="container">
+                <div class="top-banner">
+                    <a href="#modal-full" data-bs-toggle="modal" class="item">
+                        <img src="assets/images/top-banner-icon-1.svg" alt="">
+                        <span>선장님과 함께라면</span>
+                        <strong>우리 모두 <em class="text-primary">만선</em> 위캔피싱</strong>
+                    </a>
+                    <a href="#modal-meal" data-bs-toggle="modal" class="item">
+                        <img src="assets/images/top-banner-icon-2.svg" alt="">
+                        <span>즉석 활어회에 고기 한 쌈~까지~</span>
+                        <strong><em class="text-primary">회</em>도 먹고 <em class="text-primary">고기</em>도 먹고!!</strong>
+                    </a>
+                    <a href="#modal-coffee" data-bs-toggle="modal" class="item">
+                        <img src="assets/images/top-banner-icon-3.svg" alt="">
+                        <span>바다를 바라보며 즐기는 나만의 카페</span>
+                        <strong><em class="text-primary">선상</em>에서 <em class="text-primary">커피</em> 한 잔</strong>
+                    </a>
+                    <a href="#modal-shopping" data-bs-toggle="modal" class="item">
+                        <img src="assets/images/top-banner-icon-4.svg" alt="">
+                        <span>오늘의 제철로 한 가득 담아</span>
+                        <strong>해산물 <em class="text-primary">쇼핑</em></strong>
+                    </a>
+                </div>
+                <button class="banner-toggler"><img src="assets/images/btn-top-banner-collapse.svg" alt="배너 접기/펼치기"></button>
+            </div>
+        </div>
+        <div id="reservation-confirm">
+            <div class="container">
+                <div class="reservation-confirm">
+                    <div class="reservation-list">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <script>
+                            const reservationSwiper = new Swiper('.reservation-list .swiper-container', {
+                                slidesPerView: 'auto',
+                                spaceBetween: 40,
+                                autoplay: true,
+                                autoplay: {
+                                    delay: 0,
+                                    disableOnInteraction: false
+                                },
+                                loop: true,
+                                speed: 10000,
+                                autoHeight: true,
+                            });
+                        </script>
+                    </div>
+                </div>
             </div>
         </div>
         <header id="header">
@@ -60,56 +162,44 @@
         </header>
         <div id="container">
             <main id="content">
-                <section class="section1">
+                <div class="section section-0 fp-auto-height-responsive">
                     <div class="container">
-                        <div class="row gx-5">
-                            <div class="col-auto">
-                                <div class="search">
+                        <div class="row gx-7 align-items-center">
+                            <div class="col-12 col-lg-5 col-xl-4 order-2 order-lg-1">
+                                <div class="fishing-search">
                                     <p class="follow-me">
                                         오늘 하루 책임져 드릴게요! <br>
                                         <strong>We can 피싱과 즐거운 낚시여행</strong> <br>
                                         나만 믿고 따라와~
                                     </p>
-                                    <p>누구랑 가세요?</p>
+                                    <p class="who-with">누구랑 가세요?</p>
                                     <div class="with-check">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                가족
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-1">
+                                            <label class="form-check-label" for="with-1">가족</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                친구
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-2">
+                                            <label class="form-check-label" for="with-2">친구</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                연인
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-3">
+                                            <label class="form-check-label" for="with-3">연인</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                동료 선후배
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-4">
+                                            <label class="form-check-label" for="with-4">동료 선후배</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                단체
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-5">
+                                            <label class="form-check-label" for="with-5">단체</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                혼자
-                                            </label>
+                                            <input class="form-check-input" type="checkbox" value="" id="with-6">
+                                            <label class="form-check-label" for="with-6">혼자</label>
                                         </div>
                                     </div>
-                                    <div class="with-seleect">
+                                    <div class="with-select">
                                         <div class="row g-3">
                                             <div class="col">
                                                 <select class="form-select" aria-label="성인 인원 선택">
@@ -130,67 +220,225 @@
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <button type="button" class="btn btn-dark btn-lg d-block">검색</button>
+                                        <button type="button" class="btn btn-dark btn-lg d-block" data-bs-toggle="modal" data-bs-target="#modal-reservation">검색</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="slider">
+                            <div class="col-12 col-lg-7 col-xl-8 order-1 order-lg-2">
+                                <div class="main-slider">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <div class="item">
+                                                <a href="javascript:;" class="item" data-bs-toggle="modal" data-bs-target="#modal-reservation">
                                                     <img src="assets/images/slider-img-1.png" alt="">
                                                     <div class="txt">
                                                         <span>가족전용 패키지 안내</span>
                                                         <strong>아이와 함께하는 추억 가득 낚시여행! <br> 가족 패키지로 원스탑 예약하고 <br>놀고~ 먹고~ 즐기면 돼~</strong>
                                                     </div>
-                                                    <a href="" class="link">가족전용<br>패키지<br>예약하기</a>
-                                                </div>
+                                                    <span class="sticker">가족전용<br>패키지<br>예약하기</span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#none" class="item" data-bs-toggle="modal" data-bs-target="#modal-reservation">
+                                                    <img src="assets/images/slider-img-2.png" alt="">
+                                                    <div class="txt">
+                                                        <span>연인전용 패키지 안내</span>
+                                                        <strong>안면도의 낙조와 함께 무르익는 ♥♡<br> 해상카페에서 즐기는 <br>달콤한 바다~</strong>
+                                                    </div>
+                                                    <span class="sticker">연인전용<br>패키지<br>예약하기</span>
+                                                </a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a href="#none" class="item" data-bs-toggle="modal" data-bs-target="#modal-reservation">
+                                                    <img src="assets/images/slider-img-3.png" alt="">
+                                                    <div class="txt">
+                                                        <span>단체전용 패키지 안내</span>
+                                                        <strong>낚시 초보도 우리선장님과 함께라면 <br>걱정 no no~ <br>단체 회식까지 한 번에 해결~</strong>
+                                                    </div>
+                                                    <span class="sticker">단체전용<br>패키지<br>예약하기</span>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-prev"></div>
-                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev swiper-button-next-main"></div>
+                                        <div class="swiper-button-next swiper-button-prev-main"></div>
                                     </div>
                                     <script>
-                                        const mainSwiper = new Swiper('.slider .swiper-container', {
+                                        const mainSwiper = new Swiper('.main-slider .swiper-container', {
                                             navigation: {
-                                                nextEl: '.swiper-button-next',
-                                                prevEl: '.swiper-button-prev',
+                                                nextEl: '.swiper-button-next-main',
+                                                prevEl: '.swiper-button-prev-main',
                                             },
                                             pagination: {
                                                 el: '.swiper-pagination',
                                                 type: 'bullets',
                                             },
+                                            observer: true,
+                                            observeSlideChildren: true,
+                                            observeParents: true
                                         });
                                     </script>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="section3">
+                </div>
+                <div class="section section-1 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">하루종일 즐기는 코스!</h2>
-                        <p class="section-desc">승선 명부 작성부터 선상낚시까지 약 4시간 정도 소요됩니다. <br>육지로 이동해서 즐길거리는 자유시간으로 오늘 하루 일정 풀코스로 즐겨보세요!</p>
-                        <div>
+                        <div class="section-head">
+                            <h2 class="section-title">낚시 초보라도 재밌게 즐길 수 있는 하루</h2>
+                        </div>
+                        <div class="package-info">
+                            <div class="row gy-3 gy-lg-0">
+                                <div class="col-12 col-md">
+                                    <a href="#" class="card text-white">
+                                        <img src="assets/images/bg-package-family.png" class="card-img" alt="">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title">가족전용 추천패키지</h5>
+                                            <p class="card-text">아이와 함께하는 추억 가득 낚시여행! <br>가족 패키지로 원스탑 예약하고 놀고~ 먹고~ 즐기면 돼~</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md">
+                                    <a href="#" class="card text-white">
+                                        <img src="assets/images/bg-package-couple.png" class="card-img" alt="">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title">연인전용 추천패키지</h5>
+                                            <p class="card-text">안면도의 낙조와 함께 무르익는 ♥♡ <br>해상카페에서 즐기는 달콤한 바다~</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md">
+                                    <a href="#" class="card text-white">
+                                        <img src="assets/images/bg-package-group.png" class="card-img" alt="">
+                                        <div class="card-img-overlay">
+                                            <h5 class="card-title">단체전용 추천패키지</h5>
+                                            <p class="card-text">낚시 초보도 우리선장님과 함께라면 걱정 no no~ <br>단체 회식까지 한 번에 해결~</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-info">
+                            <h3>위캔피싱에서 제공하는 서비스</h3>
+                            <div class="swiper-container" id="service-info-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-service-1.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">선상낚시</h4>
+                                                <ul class="card-text-list">
+                                                    <li>1인당 3만원 (소인 1만원) 기본채비 포함</li>
+                                                    <li>낚시 적합 어종 선별 (광어, 우럭, 도미, 쭈꾸미 등)</li>
+                                                    <li>초보자 맞춤형 선상낚시 제공</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-service-2.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">물고기 손질</h4>
+                                                <ul class="card-text-list">
+                                                    <li>회뜨기 kg당 5천원</li>
+                                                    <li>매운탕 서더리 무료제공</li>
+                                                    <li>회 진공포장 비용 무료</li>
+                                                </ul>
+                                                <p class="card-text">※ 물고기 손질 비용은 현장결제 (현금)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-service-3.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">식당이용</h4>
+                                                <ul class="card-text-list">
+                                                    <li>상차림 비용 1인당 3천원</li>
+                                                    <li>밑반찬, 각종식기, 버너, 냄비, 불판 제공</li>
+                                                    <li>즉석밥, 고기, 주류 등 식당내 구매</li>
+                                                </ul>
+                                                <p class="card-text">※ 셀프식당 이용요금은 현장결제</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-service-4.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">해상카페</h4>
+                                                <ul class="card-text-list">
+                                                    <li>5천원권 쿠폰구매</li>
+                                                    <li>배를 타고 들어가는 특별한 카페</li>
+                                                    <li>체험낚시 제공 (별도비용)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-service-5.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">해산물 쇼핑</h4>
+                                                <ul class="card-text-list">
+                                                    <li>1만원권 쿠폰구매</li>
+                                                    <li>당일 잡은 신선한 해산물 구매</li>
+                                                    <li>현장에서 추가구매 가능함</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                const servicdInfoSwiper = new Swiper('#service-info-swiper', {
+                                    slidesPerView: 5,
+                                    spaceBetween: 18,
+                                    breakpoints: {
+                                        991: {
+                                            slidesPerView: 2.4
+                                        },
+                                        768: {
+                                            slidesPerView: 1.6,
+                                            spaceBetween: 16,
+                                            freeMode: true,
+                                        }
+                                    },
+                                    observer: true,
+                                    observeSlideChildren: true,
+                                    observeParents: true
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="section section-2 fp-auto-height-responsive">
+                    <div class="container">
+                        <div class="section-head">
+                            <h2 class="section-title">하루종일 즐기는 코스!</h2>
+                            <p class="section-desc">승선 명부 작성부터 선상낚시까지 약 4시간 정도 소요됩니다. <br>육지로 이동해서 즐길거리는 자유시간으로 오늘 하루 일정 풀코스로 즐겨보세요!</p>
+                        </div>
+                        <div class="schedule-info">
                             <img src="assets/images/img-schedule.png" alt="">
                         </div>
                     </div>
-                </section>
-                <section class="section4">
+                </div>
+                <div class="section section-3 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">20년 이상 경력이 아니면 배 운전 안합니다!</h2>
-                        <p class="section-desc">시원 바람과 파도, 갈매기와 함께 고객분들을 안전하게 선상 낚시터까지 이동시켜드립니다.</p>
+                        <div class="section-head">
+                            <h2 class="section-title">20년 이상 경력이 아니면 배 운전 안합니다!</h2>
+                            <p class="section-desc">시원 바람과 파도, 갈매기와 함께 고객분들을 안전하게 선상 낚시터까지 이동시켜드립니다.</p>
+                        </div>
                         <div class="captain">
                             <h3 class="captain-resume">
                                 <div class="tit">선장님들의 <br>간략한 이력서</div>
                                 <p>배 이동시간은 10분 정도 소요됩니다.</p>
                             </h3>
                             <div class="captain-list">
-                                <ul class="row gx-3">
-                                    <li class="col">
+                                <ul class="row gx-lg-5 gy-3 gy-lg-0">
+                                    <li class="col-12 col-md">
                                         <div class="card">
                                             <img src="assets/images/img-captain-1.png" class="card-img-top" alt="">
                                             <div class="card-body">
@@ -200,7 +448,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col">
+                                    <li class="col-12 col-md">
                                         <div class="card">
                                             <img src="assets/images/img-captain-2.png" class="card-img-top" alt="">
                                             <div class="card-body">
@@ -210,7 +458,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="col">
+                                    <li class="col-12 col-md">
                                         <div class="card">
                                             <img src="assets/images/img-captain-3.png" class="card-img-top" alt="">
                                             <div class="card-body">
@@ -224,18 +472,20 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="section5">
+                </div>
+                <div class="section section-4 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">이주에 낚시왕을 찾아라!</h2>
-                        <p class="section-desc">오늘은 내~가 선/상/낚/시 낚시왕, 누가 누가 더 잘 잡았나~ <br>선장님들의 눈에 쏙~ 들어온 월척을 찍어라!</p>
+                        <div class="section-head">
+                            <h2 class="section-title">이 주의 낚시왕을 찾아라!</h2>
+                            <p class="section-desc">오늘은 내~가 선/상/낚/시 낚시왕, 누가 누가 더 잘 잡았나~ <br>선장님들의 눈에 쏙~ 들어온 월척을 찍어라!</p>
+                        </div>
                         <div class="fishing-king">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
 
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-king-1.png" class="card-img-top" alt=""></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-1.jpg" class="card-img-top" alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">4월 첫째주 낚시왕</h4>
                                                 <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
@@ -246,7 +496,7 @@
 
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-king-2.png" class="card-img-top" alt=""></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-2.jpg" class="card-img-top" alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">4월 첫째주 낚시왕</h4>
                                                 <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
@@ -257,7 +507,7 @@
 
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-king-3.png" class="card-img-top" alt=""></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-3.jpg" class="card-img-top" alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">4월 첫째주 낚시왕</h4>
                                                 <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
@@ -268,7 +518,216 @@
 
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-king-4.png" class="card-img-top" alt=""></a>
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-4.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-5.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-6.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-7.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-8.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-9.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-10.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-11.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-12.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-13.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-14.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-15.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-16.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-17.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-18.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-19.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-20.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-21.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-22.jpg" class="card-img-top" alt=""></a>
+                                            <div class="card-body">
+                                                <h4 class="card-title">4월 첫째주 낚시왕</h4>
+                                                <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
+                                                <p class="card-text text-primary">#4월첫째주낚시왕 #위캔피싱 #4월낚시왕 #우럭</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#modal-gallery"><img src="assets/images/gallery-23.jpg" class="card-img-top" alt=""></a>
                                             <div class="card-body">
                                                 <h4 class="card-title">4월 첫째주 낚시왕</h4>
                                                 <p class="card-text">안녕하세요~ <br>고객님의 안전을 최우선으로 생각하는 선장 후크 입니다~^^ 배낚시의 재미를 느끼게 해드릴께요~</p>
@@ -282,209 +741,205 @@
                             </div>
                             <script>
                                 const fishingKingSwiper = new Swiper('.fishing-king .swiper-container', {
-                                    slidesPerView: 2.8,
+                                    slidesPerView: 3.4,
                                     spaceBetween: 40,
-                                    //loop: true,
-                                    navigation: {
-                                        nextEl: '.swiper-button-next',
-                                        prevEl: '.swiper-button-prev',
-                                    },
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        type: 'bullets',
-                                    },
                                     scrollbar: {
                                         el: '.swiper-scrollbar',
                                         draggable: true,
                                     },
+                                    breakpoints: {
+                                        991: {
+                                            slidesPerView: 2.4
+                                        },
+                                        768: {
+                                            slidesPerView: 1.6,
+                                            spaceBetween: 16,
+                                            freeMode: true,
+                                        }
+                                    }
                                 });
                             </script>
                         </div>
                     </div>
-                </section>
-                <section class="section5">
+                </div>
+                <div class="section section-5 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">자주 묻는 질문 TOP 7</h2>
-                        <div class="accordion">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-1">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
+                        <div class="section-head">
+                            <h2 class="section-title">자주 묻는 질문 TOP 7</h2>
+                        </div>
+                        <div class="faq">
+                            <div class="accordion" id="faq">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-1">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
+                                            배낚시 이용요금은 어떻게 되나요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            내만 우럭낚시, 쭈꾸미 낚시, 우럭&amp;광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="true" aria-controls="faq-2">
+                                            잡히는 어종은 어떤것이 있나요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            우럭, 광어, 농어, 놀래미, 백조기, 쭈꾸미, 갑오징어등 계절과 포인트에 따라 다양한 어종의 낚시가 가능합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="true" aria-controls="faq-3">
+                                            배낚시 준비물은 무엇인가요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            먼저 물고기를 잡기위한 낚시대와 채비, 미끼가 필요하며 그외 개인 준비물(모자, 썬글라스, 토시, 아이스박스 등)을 준비하시면 됩니다. 낚시대 대여와 채비, 미끼는 현지 출조점에서 저렴하게 구입이 가능합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-4">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="true" aria-controls="faq-4">
+                                            점심은 어떻게 해결하나요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            점심시간에 맞춰 저희가 준비한 음식으로 무료 식사가 가능합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-5">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="true" aria-controls="faq-5">
+                                            이용 시간은 언제부터 언제까지 인가요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            이용 시간은 낚시 종류에 따라 다양하며, 대부분 오전 일찍 출조하여, 오후2~3시에 입항합니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-6">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="true" aria-controls="faq-6">
+                                            배낚시 예약은 어떻게 하나요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            전화로 상담후 예약하시거나 문자와 인터넷, 모바일로 예약을 하신 후 이용요금을 인원수에 맞게 송금해 주시면 예약 완료가 됩니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faq-heading-7">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7" aria-expanded="true" aria-controls="faq-7">
+                                            환불 규정은 무엇인가요?
+                                        </button>
+                                    </h2>
+                                    <div id="faq-7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7" data-bs-parent="#faq">
+                                        <div class="accordion-body">
+                                            예약 완료 후 개인사정에 의한 5일전 취소 100% 환불 불가하며, 당일 주의보성기후로 인한 출항불가(해양경찰서에 의한 통제)나 7일전 취소는 환불, 연기 가능합니다.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-2">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="true" aria-controls="faq-2">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-3">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="true" aria-controls="faq-3">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-4">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="true" aria-controls="faq-4">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-5">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="true" aria-controls="faq-5">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-6">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="true" aria-controls="faq-6">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-7">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7" aria-expanded="true" aria-controls="faq-7">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-8">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-8" aria-expanded="true" aria-controls="faq-8">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="faq-heading-9">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-9" aria-expanded="true" aria-controls="faq-9">
-                                        배낚시 이용요금은 어떻게 되나요?
-                                    </button>
-                                </h2>
-                                <div id="faq-9" class="accordion-collapse collapse" aria-labelledby="faq-heading-9">
-                                    <div class="accordion-body">
-                                        내만 우럭낚시, 쭈꾸미 낚시, 우럭&광어 다운샷, 농어 외수질(새우 미끼포함)등 어종과 거리에 따라 요금이 결정됩니다 보통 7만원에서 13만원정도입니다.
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                </section>
-                <section class="section6">
+                </div>
+                <div class="section section-6 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">안면도 명소, 어디까지 가보았니?</h2>
-                        <p class="section-desc">하루 풀코스로 낚시를 즐겼다면, <br>다음날은 주변 명소도 덤으로 둘러보아야하지 않을까요?</p>
+                        <div class="section-head">
+                            <h2 class="section-title">안면도 명소, 어디까지 가보았니?</h2>
+                            <p class="section-desc">하루 풀코스로 낚시를 즐겼다면, <br>다음날은 주변 명소도 덤으로 둘러보아야하지 않을까요?</p>
+                        </div>
                         <div class="sights">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-sights-1.png" class="card-img-top" alt=""></a>
+                                            <img src="assets/images/img-sights-1.png" class="card-img-top" alt="">
                                             <div class="card-body">
                                                 <h4 class="card-title">태안 세계튤립 꽃 축제(4월~5월)</h4>
                                                 <p class="card-text">고결하고 우아해 보이는 자태로 귀족의 상징이라고도 불렸던 튤립은 현재에 이르러서도 많은 사랑을 받고 있습니다. 안면도 국제 꽃 박람회가 펼쳐졌던 꽃지해안공원에서 꽃이 전하는 감동을 느껴보세요.</p>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-sights-2.png" class="card-img-top" alt=""></a>
+                                            <img src="assets/images/img-sights-2.png" class="card-img-top" alt="">
                                             <div class="card-body">
-                                                <h4 class="card-title">태안 세계튤립 꽃 축제(4월~5월)</h4>
-                                                <p class="card-text">고결하고 우아해 보이는 자태로 귀족의 상징이라고도 불렸던 튤립은 현재에 이르러서도 많은 사랑을 받고 있습니다. 안면도 국제 꽃 박람회가 펼쳐졌던 꽃지해안공원에서 꽃이 전하는 감동을 느껴보세요.</p>
+                                                <h4 class="card-title">쥬라기박물관</h4>
+                                                <p class="card-text">공룡뿐만 아니라 자연과학의 발전을 알아보는 체계적인 시대 별 화석, 우리의 실생활에서 발견되고 활용되는 여러 광물들과 원석300여종, 그리고 그 원석을 가공하여 만든 보석과 쥬얼리, 실제 살아있는 희귀 동물 등이 전시되어 있습니다.</p>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-sights-3.png" class="card-img-top" alt=""></a>
+                                            <img src="assets/images/img-sights-3.png" class="card-img-top" alt="">
                                             <div class="card-body">
-                                                <h4 class="card-title">태안 세계튤립 꽃 축제(4월~5월)</h4>
-                                                <p class="card-text">고결하고 우아해 보이는 자태로 귀족의 상징이라고도 불렸던 튤립은 현재에 이르러서도 많은 사랑을 받고 있습니다. 안면도 국제 꽃 박람회가 펼쳐졌던 꽃지해안공원에서 꽃이 전하는 감동을 느껴보세요.</p>
+                                                <h4 class="card-title">안면 카트 체험장</h4>
+                                                <p class="card-text">낚시터와 가까운곳에 위치한 카트 체험장은 남녀불문하고 연인, 친구, 온가족이 함께 즐길 수 있습니다.
+                                                    오늘 고기도 잔뜩 잡아 신나는데~ 액티비티한 카트 운행으로 한 번 더 기분을 UP 해볼까요!?</p>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-sights-4.png" class="card-img-top" alt=""></a>
+                                            <img src="assets/images/img-sights-4.png" class="card-img-top" alt="">
                                             <div class="card-body">
-                                                <h4 class="card-title">태안 세계튤립 꽃 축제(4월~5월)</h4>
-                                                <p class="card-text">고결하고 우아해 보이는 자태로 귀족의 상징이라고도 불렸던 튤립은 현재에 이르러서도 많은 사랑을 받고 있습니다. 안면도 국제 꽃 박람회가 펼쳐졌던 꽃지해안공원에서 꽃이 전하는 감동을 느껴보세요.</p>
+                                                <h4 class="card-title">앞면도 자연휴양림</h4>
+                                                <p class="card-text">안면도 자연휴양림은 국내 유일의 소나무 단순림으로서 수령 100 년 내외의 안면 소나무 천연림이 430ha에 집단적으로 울창하게 자라고 있습니다.
+                                                    휴양림으로 들어서는 순간 쭉쭉 뻗어오른 소나무들에서 뿜어 나오는 솔향기에 정신이 맑아집니다.</p>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="swiper-slide">
                                         <div class="card">
-                                            <a href=""><img src="assets/images/img-sights-5.png" class="card-img-top" alt=""></a>
+                                            <img src="assets/images/img-sights-5.png" class="card-img-top" alt="">
                                             <div class="card-body">
-                                                <h4 class="card-title">태안 세계튤립 꽃 축제(4월~5월)</h4>
-                                                <p class="card-text">고결하고 우아해 보이는 자태로 귀족의 상징이라고도 불렸던 튤립은 현재에 이르러서도 많은 사랑을 받고 있습니다. 안면도 국제 꽃 박람회가 펼쳐졌던 꽃지해안공원에서 꽃이 전하는 감동을 느껴보세요.</p>
+                                                <h4 class="card-title">꽃지해수욕장</h4>
+                                                <p class="card-text">꽃지해수욕장은 넓은 백사장과 할미바위, 할아비바위가 어우러져 그림 같은 풍광을 보여줍니다. 2개의 바위 너머로 붉게 물드는 낙조는 태안을 상징하는 아름다운 풍광 중 으뜸으로 꼽치며 우리나라 3대 일몰중에 하나인곳으로 인스타 성지로 유명합니다.</p>
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-sights-6.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">태안 백합꽃 축제(7월~8월)</h4>
+                                                <p class="card-text">향기에 취하고 화려함에 매료되는 백함은 국내는 물론 전 세계적으로 유일무이하게 축제가 펼쳐지는 곳으로 백합의 매력에 빠져 모든걸 잊고 나가실 때는 웃음꽃을 띄죠. 최고의 만족과 시원함의 감동을 받아 돌아갈 수 있습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-sights-7.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">코리아플라워파크 빛 축제</h4>
+                                                <p class="card-text">태안 빛축제의 규모를 압도하는 코리아플라워파크 빛축제는 8개의 테마로 나뉘어 있습니다. 구역별 테마를 둘러보려면 자연스레 ‘루미나리길’ 과 마주하게 되며 가는 곳곳마다 웅장함을 표현한 ‘서치라이트’ 존은 시선을 뗄 수 없을 정도라고 합니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <img src="assets/images/img-sights-8.png" class="card-img-top" alt="">
+                                            <div class="card-body">
+                                                <h4 class="card-title">팜카밀레 허브농원(5월~6월)​</h4>
+                                                <p class="card-text">200여종의 허브와 500 여종의 야생화와 그라스, 습지식물 150여종의 관목들이 땅에 뿌리를 내리고 살아가고 충남 태안군에 위치한 팜카밀레 허브농원에서 다양한 체험과 매혹적인 향기에 취해보세요.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="swiper-scrollbar"></div>
                             </div>
@@ -493,44 +948,936 @@
                                     slidesPerView: 3.8,
                                     spaceBetween: 40,
                                     //loop: true,
-                                    navigation: {
-                                        nextEl: '.swiper-button-next',
-                                        prevEl: '.swiper-button-prev',
-                                    },
-                                    pagination: {
-                                        el: '.swiper-pagination',
-                                        type: 'bullets',
-                                    },
                                     scrollbar: {
                                         el: '.swiper-scrollbar',
                                         draggable: true,
                                     },
+                                    breakpoints: {
+                                        1024: {
+                                            slidesPerView: 3.2,
+                                            spaceBetween: 30,
+                                            freeMode: true,
+                                        },
+                                        768: {
+                                            slidesPerView: 1.5,
+                                            spaceBetween: 20,
+                                            freeMode: true,
+                                        }
+                                    }
                                 });
                             </script>
                         </div>
                     </div>
-                </section>
-                <section class="section7">
+                </div>
+                <div class="section section-7 fp-auto-height-responsive">
                     <div class="container">
-                        <h2 class="section-title">천천히 안전운행하세요.</h2>
-                        <p class="section-desc"><i class="icon-marker"></i> 충청남도 태안군 남면 당암리 1-20</p>
+                        <div class="section-head">
+                            <h2 class="section-title">천천히 안전운행하세요.</h2>
+                            <p class="section-desc"><i class="icon-marker"></i> 충청남도 태안군 남면 당암리 1-20</p>
+                        </div>
                         <div class="location">
                             <img src="assets/images/img-map.png" alt="">
                         </div>
+                        <div class="company-info">
+                            상호명 : 주식회사 소프트퍼즐 대표 : 변희복 개인정보 책임자 : 변희복 이메일 : hbbyun@softpuzzle.co.kr 고객센터: 010-4724-0390 <br>
+                            주소 : 서울 구로구 디지털로27길 36 이스페이스 514-1호 사업자등록번호 : 818-86-00633 통신판매업 : 제 2017-서울금천-0858 호
+                        </div>
+                        <p class="copyright">© COPYRIGHT wecanfishing. ALL RIGHT RESERVED.</p>
                     </div>
-                </section>
+                </div>
             </main>
         </div>
-        <footer id="footer">
-            <div class="container">
-                <div class="footer-info">
-                    상호명 : 주식회사 소프트퍼즐 대표 : 변희복 개인정보 책임자 : 변희복 이메일 : hbbyun@softpuzzle.co.kr 고객센터: 010-4724-0390 <br>
-                    주소 : 서울 구로구 디지털로27길 36 이스페이스 514-1호 사업자등록번호 : 818-86-00633 통신판매업 : 제 2017-서울금천-0858 호
-                </div>
-                <p class="copyright">© COPYRIGHT wecanfishing. ALL RIGHT RESERVED.</p>
-            </div>
-        </footer>
     </div>
+
+    <div class="modal layer" tabindex="-1" id="modal-gallery">
+        <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="gallery">
+                    <h1 class="gallery-title">4월 첫째주 갤러리</h1>
+                    <div class="swiper-container gallery-top">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-1.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-2.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-3.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-4.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-5.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-6.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-7.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-8.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-9.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-10.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-11.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-12.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-13.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-14.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-15.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-16.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-17.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-18.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-19.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-20.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-21.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-22.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-23.jpg" class="card-img-top" alt="">
+                            </div>
+
+                        </div>
+                        <div class="swiper-button-next swiper-button-next-gallery"></div>
+                        <div class="swiper-button-prev swiper-button-prev-gallery"></div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-1.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-2.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-3.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-4.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-5.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-6.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-7.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-8.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-9.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-10.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-11.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-12.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-13.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-14.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-15.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-16.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-17.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-18.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-19.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-20.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-21.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-22.jpg" class="card-img-top" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="assets/images/gallery-23.jpg" class="card-img-top" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var galleryModal = document.getElementById('modal-gallery');
+        galleryModal.addEventListener('show.bs.modal', function(event) {
+            setTimeout(function() {
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 16,
+                    slidesPerView: 6,
+                    freeMode: true,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                    breakpoints: {
+                        991: {
+                            slidesPerView: 5,
+                            spaceBetween: 15,
+                            freeMode: true,
+                        },
+                        768: {
+                            slidesPerView: 5,
+                            spaceBetween: 8,
+                            freeMode: true,
+                        }
+                    }
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    spaceBetween: 10,
+                    slideToClickedSlide: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next-gallery',
+                        prevEl: '.swiper-button-prev-gallery',
+                    },
+                    thumbs: {
+                        swiper: galleryThumbs,
+                    },
+                    observer: true,
+                    observeSlideChildren: true,
+                    observeParents: true
+                });
+            }, 10);
+        })
+    </script>
+    <div class="modal layer" tabindex="-1" id="modal-full">
+        <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="service-info-detail">
+                    <img src="../assets/images/top-banner-icon-1-white.svg" alt="">
+                    <h1>우리 모두 <span class="text-primary">만선</span> 위킨피싱</h1>
+                    <p class="desc">베테랑 경력의 우리 선장님과 함께라면 우리모두 만선! <br>계절과 물때에 맞게 쭈꾸미, 우럭 등 제철 물고기 맞춤형 배낚시 <br>안전과 친절함은 기본제공</p>
+                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <div class="imgs">
+                        <div class="img"><img src="assets/images/img-service-full-1.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-full-2.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-full-3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal layer" tabindex="-1" id="modal-meal">
+        <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="service-info-detail">
+                    <img src="../assets/images/top-banner-icon-2-white.svg" alt="">
+                    <h1><span class="text-primary">회</span>도 먹고 <span class="text-primary">고기</span>도 먹고!!</h1>
+                    <p class="desc">직접잡은 물고기 회와 바비큐 만찬 식도락 여행의 끝판왕 <br>※셀프식당에서 고기구매 및 상차림비용을 지불 후 이용할 수 있습니다. <br>(밑반찬, 쌈채소, 불판 등 제공)</p>
+                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <div class="imgs">
+                        <div class="img"><img src="assets/images/img-service-meal-1.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-meal-2.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-meal-3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal layer" tabindex="-1" id="modal-coffee">
+        <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="service-info-detail">
+                    <img src="../assets/images/top-banner-icon-3-white.svg" alt="">
+                    <h1><span class="text-primary">선상</span>에서 <span class="text-primary">커피</span> 한 잔</h1>
+                    <p class="desc">서해안의 낙조를 바라보며 분위기있게 커피 한 잔~ <br>일상의 스트레스를 날려버릴 압도적인 분위기 <br>가족, 연인, 친구 모두에게 강추~</p>
+                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <div class="imgs">
+                        <div class="img"><img src="assets/images/img-service-coffee-1.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-coffee-2.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-coffee-3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal layer" tabindex="-1" id="modal-shopping">
+        <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="service-info-detail">
+                    <img src="../assets/images/top-banner-icon-4-white.svg" alt="">
+                    <h1>해산물 <span class="text-primary">쇼핑</span></h1>
+                    <p class="desc">어머! 이건 꼭 사야해~ <br>서해안의 모든 해산물이 다 모였다! <br>당일 직접 잡은 해산물 직거래! 살수록 이득!</p>
+                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <div class="imgs">
+                        <div class="img"><img src="assets/images/img-service-shopping-1.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-shopping-2.png" alt=""></div>
+                        <div class="img"><img src="assets/images/img-service-shopping-3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modal-reservation">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <div class="reservation">
+                        <div class="reservation-body">
+                            <div class="row">
+                                <div class="col-12 col-lg">
+                                    <h1><span class="text-primary">가족패키지</span> 예약자 정보를 입력해주세요</h1>
+                                    <p class="desc">관련 법률 및 규정에 따라 고객님의 동의가 필요하며, <br>입력정보는 동의 범위를 벗어난 목적으로는 절대 사용되지 않습니다.</p>
+                                    <p class="warning"><i class="material-icons">error</i>1년으로 가입하는 경우, 보험기간의 시작일과 종료일은 반드시 같아야 합니다.</p>
+                                </div>
+                                <div class="col-12 col-lg-auto">
+                                    <div class="reservation-form">
+                                        <h2>필수정보</h2>
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control" placeholder="예약자 이름">
+                                        </div>
+                                        <div class="row align-items-center g-2 mb-2">
+                                            <div class="col"><input type="text" class="form-control"></div>
+                                            <div class="col-auto">-</div>
+                                            <div class="col"><input type="text" class="form-control"></div>
+                                            <div class="col-auto">-</div>
+                                            <div class="col"><input type="text" class="form-control"></div>
+                                        </div>
+                                        <div class="row align-items-center g-3 mb-2">
+                                            <div class="col">
+                                                <select class="form-select" aria-label="성인 인원 선택">
+                                                    <option selected>성인 1명</option>
+                                                    <option>성인 2명</option>
+                                                    <option>성인 3명</option>
+                                                    <option>성인 4명</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <select class="form-select" aria-label="초등/미취학 인원 선택">
+                                                    <option selected>초등/미취학 1명</option>
+                                                    <option>초등/미취학 2명</option>
+                                                    <option>초등/미취학 3명</option>
+                                                    <option>초등/미취학 4명</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <input type="text" class="form-control form-datepicker" placeholder="날짜 선택">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-info">
+                                <h3 class="text-start mb-3">위캔피싱에서 제공하는 서비스</h3>
+                                <div class="swiper-container" id="service-info-in-modal">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img src="assets/images/img-service-1.png" class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">선상낚시</h4>
+                                                    <ul class="card-text-list">
+                                                        <li>1인당 3만원 (소인 1만원) 기본채비 포함</li>
+                                                        <li>낚시 적합 어종 선별 (광어, 우럭, 도미, 쭈꾸미 등)</li>
+                                                        <li>초보자 맞춤형 선상낚시 제공</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img src="assets/images/img-service-2.png" class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">물고기 손질</h4>
+                                                    <ul class="card-text-list">
+                                                        <li>회뜨기 kg당 5천원</li>
+                                                        <li>매운탕 서더리 무료제공</li>
+                                                        <li>회 진공포장 비용 무료</li>
+                                                    </ul>
+                                                    <p class="card-text">※ 물고기 손질 비용은 현장결제 (현금)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img src="assets/images/img-service-3.png" class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">식당이용</h4>
+                                                    <ul class="card-text-list">
+                                                        <li>상차림 비용 1인당 3천원</li>
+                                                        <li>밑반찬, 각종식기, 버너, 냄비, 불판 제공</li>
+                                                        <li>즉석밥, 고기, 주류 등 식당내 구매</li>
+                                                    </ul>
+                                                    <p class="card-text">※ 셀프식당 이용요금은 현장결제</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img src="assets/images/img-service-4.png" class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">해상카페</h4>
+                                                    <ul class="card-text-list">
+                                                        <li>5천원권 쿠폰구매</li>
+                                                        <li>배를 타고 들어가는 특별한 카페</li>
+                                                        <li>체험낚시 제공 (별도비용)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <img src="assets/images/img-service-5.png" class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h4 class="card-title">해산물 쇼핑</h4>
+                                                    <ul class="card-text-list">
+                                                        <li>1만원권 쿠폰구매</li>
+                                                        <li>당일 잡은 신선한 해산물 구매</li>
+                                                        <li>현장에서 추가구매 가능함</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const servicdInfoInModalSwiper = new Swiper('#service-info-in-modal', {
+                                        slidesPerView: 5,
+                                        spaceBetween: 15,
+                                        breakpoints: {
+                                            991: {
+                                                slidesPerView: 2.4,
+                                                spaceBetween: 10,
+                                                freeMode: true,
+                                            },
+                                            768: {
+                                                slidesPerView: 1.6,
+                                                spaceBetween: 10,
+                                                freeMode: true,
+                                            }
+                                        },
+                                        observer: true,
+                                        observeSlideChildren: true,
+                                        observeParents: true
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation-footer">
+                        <div class="row align-items-center g-0">
+                            <div class="col d-none d-lg-block">
+                                <div class="contact">
+                                    <i class="icon-phone"></i>
+                                    <span>문의/예약</span>
+                                    <a href="tel:01047240390">010 4724 0390</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg-auto">
+                                <button type="button" class="btn btn-primary btn-lg btn-reservation" data-bs-toggle="modal" data-bs-target="#modal-payment">예약하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modal-payment">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <div class="reservation">
+                        <div class="reservation-body">
+                            <h1 class="user-name">[곽정석 고객님의 예약내역]</h1>
+                            <table class="table text-center">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>셀프식당 이용여부</th>
+                                        <th>예약자 전화번호</th>
+                                        <th>예약일자</th>
+                                        <th>인원</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>홍길동</td>
+                                        <td>010-0000-0000</td>
+                                        <td>2022.05.15</td>
+                                        <td>대인 2명 / 소인 1명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table text-center mt-5 mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>항목</th>
+                                        <th>내용</th>
+                                        <th>금액</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">합계</td>
+                                        <td class="text-danger"><strong>190,000원</strong></td>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>선상낚시</td>
+                                        <td>대인 2명 / 소인 1명</td>
+                                        <td>160,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>물고기손질</td>
+                                        <td>당일결정</td>
+                                        <td>현장결제</td>
+                                    </tr>
+                                    <tr>
+                                        <td>셀프식당</td>
+                                        <td>당일결정</td>
+                                        <td>현장결제</td>
+                                    </tr>
+                                    <tr>
+                                        <td>해상카페</td>
+                                        <td>2매</td>
+                                        <td>10,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>해산물 쇼핑</td>
+                                        <td>2매</td>
+                                        <td>20,000원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="reservation-footer">
+                        <div class="row align-items-center g-0">
+                            <div class="col d-none d-lg-block">
+                                <div class="contact">
+                                    <i class="icon-phone"></i>
+                                    <span>문의/예약</span>
+                                    <a href="tel:01047240390">010 4724 0390</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg-auto">
+                                <button type="button" class="btn btn-brown btn-lg btn-package" data-bs-toggle="modal" data-bs-target="#modal-package">패키지 직접구성</button>
+                            </div>
+                            <div class="col col-lg-auto">
+                                <button type="button" class="btn btn-primary btn-lg btn-payment">결제하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="modal-package">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <div class="reservation">
+                        <div class="reservation-side">
+                            <ol class="step">
+                                <li class="active">
+                                    <i>01</i>
+                                    <strong>선상낚시</strong>
+                                    <ul class="text-dot-list">
+                                        <li>1인당 6만원 (소인 4만원)</li>
+                                        <li>기본채비 포함</li>
+                                        <li>낚시 적합어종 선별 <br>(광어, 우럭, 돔, 쭈꾸미 등)</li>
+                                        <li>초보자 맞춤형 선상낚시</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <i>02</i>
+                                    <strong>물고기 손질</strong>
+                                    <ul class="text-dot-list">
+                                        <li>회뜨기 kg당 5천원</li>
+                                        <li>매운탕 서더리 무료제공</li>
+                                        <li>회 진공포장 비용 무료</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <i>03</i>
+                                    <strong>식당이용</strong>
+                                    <ul class="text-dot-list">
+                                        <li>상차림 비용 1인당 3,000원</li>
+                                        <li>버너, 불판, 각종 식사도구 제공</li>
+                                        <li>술, 음료는 셀프식당 내 판매</li>
+                                        <li>즉석밥, 초장, 김치 등 기본음식 식당내 판매</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <i>04</i>
+                                    <strong>해상카페</strong>
+                                    <ul class="text-dot-list">
+                                        <li>해상카페 쿠폰 1장당 5,000원</li>
+                                        <li>아메리카노(hot/ice 기준)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <i>05</i>
+                                    <strong>해산물 쇼핑</strong>
+                                    <ul class="text-dot-list">
+                                        <li>해산물 구매쿠폰 1장 당 10,000원</li>
+                                        <li>쿠폰으로 해산물 구매 시 10% DC</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="reservation-body">
+                            <div class="package-custom">
+                                <div class="package-step-1">
+                                    <table class="table text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>인원</th>
+                                                <th>요금</th>
+                                                <th>총 금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>대인 2명 / 소인 1명</td>
+                                                <td>현장결제(현금)</td>
+                                                <td><strong class="text-danger">160,000원</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="text-dot-list">
+                                        <li>선상낚시 기본요금은 성인 6만원 / 소인(초등, 미취학) 4만원 입니다.</li>
+                                        <li>선상낚시 비용은 예약인원 모두에게 적용됩니다. (기본비용)</li>
+                                        <li>기본채비는 제공해드립니다.</li>
+                                        <li>채비가 부족할 수 있으니 채비를 추가구매 하시는 것이 좋습니다.</li>
+                                        <li>어종에 따른 특수채비는 지정된 낚시마트에서 당일 구매 가능합니다.</li>
+                                        <li>낚시 줄 묶는 법은 낚시 시작 전 알려드립니다.</li>
+                                        <li>선상낚시 시간은 약 4시간 정도입니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="package-step-2" style="display:none">
+                                    <table class="table text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>물고기 손질여부</th>
+                                                <th>요금</th>
+                                                <th>총 금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fishCut" id="fishCut1">
+                                                        <label class="form-check-label" for="fishCut1">당일결정</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fishCut" id="fishCut2">
+                                                        <label class="form-check-label" for="fishCut2">이용함</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="fishCut" id="fishCut3">
+                                                        <label class="form-check-label" for="fishCut3">이용하지 않음</label>
+                                                    </div>
+                                                </td>
+                                                <td>현장결제(현금)</td>
+                                                <td><strong class="text-danger">160,000원</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="text-dot-list">
+                                        <li>회뜨기용 손질은 kg당 5,000원 입니다. (내장만 제거는 2,000원)</li>
+                                        <li>회 뜬 후 남은 서더리는 가져가실 수 있습니다.</li>
+                                        <li>잡은 물고기를 그냥 가져가실 경우 피 빼드립니다.</li>
+                                        <li>보관용기(아이스박스 등)는 고객님이 준비하셔야 합니다.</li>
+                                        <li>회 진공포장 비용은 무료 입니다.</li>
+                                        <li>잡은 물고기는 셀프식당에서 바로 드실 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="package-step-3" style="display:none">
+                                    <table class="table text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>셀프식당 이용여부</th>
+                                                <th>요금</th>
+                                                <th>총 금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="selfUse" id="selfUse1">
+                                                        <label class="form-check-label" for="selfUse1">당일결정</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="selfUse" id="selfUse2">
+                                                        <label class="form-check-label" for="selfUse2">이용함</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="selfUse" id="selfUse3">
+                                                        <label class="form-check-label" for="selfUse3">이용하지 않음</label>
+                                                    </div>
+                                                </td>
+                                                <td>현장결제(현금)</td>
+                                                <td><strong class="text-danger">160,000원</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="text-dot-list">
+                                        <li>상차림 비용은 1인당 3,000원 입니다.</li>
+                                        <li>버너, 불판, 수저, 그릇 등 각종 식사도구 제공해드립니다.</li>
+                                        <li>잡은 물고기는 셀프식당에서 바로 드실 수 있습니다.</li>
+                                        <li>저렴한 가격에 질 좋은 한돈 돼지고기(삼겹살, 목살)를 판매하고 있습니다.</li>
+                                        <li>
+                                            셀프식당 내 별도판매 목록 <br>
+                                            - 즉석밥, 초장, 김치, 쌈채소, 한돈 돼지고기(삼겹살, 목살), 소시지, 조미김, 라면 <br>
+                                            - 각종음료 및 주류(맥주, 소주), 매운탕 양념 밀키트
+                                        </li>
+                                        <li>식사시간은 2시간 입니다.</li>
+                                        <li>외부 음식은 반입이 금지됩니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="package-step-4" style="display:none">
+                                    <table class="table text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>해상카페 이용여부</th>
+                                                <th>요금</th>
+                                                <th>총 금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-select form-select-sm w-auto d-inline-block border-0 py-0" aria-label="매수 선택">
+                                                        <option selected>1 매</option>
+                                                        <option>2 매</option>
+                                                        <option>3 매</option>
+                                                        <option>4 매</option>
+                                                    </select>
+                                                </td>
+                                                <td>10,000원</td>
+                                                <td><strong class="text-danger">160,000원</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="text-dot-list">
+                                        <li>배를 타고 나가 위캔피싱이 예쁘게 꾸며놓은 해상카페에서 커피 한잔의 여유를 즐기실 수 있습니다.</li>
+                                        <li>해상카페 쿠폰 1장 당 5,000원</li>
+                                        <li>아메리카노 기준(hot/ice)</li>
+                                        <li>다른 음료 선택 시 추가비용이 발생할 수 있습니다. (현장결제)</li>
+                                        <li>셀프식당을 이용하는 고객님은 셀프식당 이용 후, 셀프식당을 이용하지 않는 고객님은 선상낚시 후 해상카페를 이용하실 수 있습니다.</li>
+                                        <li>선상낚시가 아쉬운 고객님은 해상카페 옆에 마련된 체험장에서 추가로 낚시를 하실 수 있습니다. (추가비용 발생. 현장결제)</li>
+                                    </ul>
+                                </div>
+                                <div class="package-step-5" style="display:none">
+                                    <table class="table text-center">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>해산물 쇼핑 이용여부</th>
+                                                <th>요금</th>
+                                                <th>총 금액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select class="form-select form-select-sm w-auto d-inline-block border-0 py-0" aria-label="매수 선택">
+                                                        <option selected>1 매</option>
+                                                        <option>2 매</option>
+                                                        <option>3 매</option>
+                                                        <option>4 매</option>
+                                                    </select>
+                                                </td>
+                                                <td>20,000원</td>
+                                                <td><strong class="text-danger">160,000원</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="text-dot-list">
+                                        <li>당일 잡은 싱싱한 해산물을 산지 가격으로 구매하실 수 있습니다.</li>
+                                        <li>활어 뿐만 아니라 각종 건어물 및 안면도 특산물(꽃게, 대하, 어리굴젓 등)을 저렴한 가격에 구매하실 수 있습니다.</li>
+                                        <li>해산물 구매 쿠폰 1장 당 10,000원</li>
+                                        <li>해산물 쿠폰으로 구매 시 10% DC 적용됩니다.</li>
+                                        <li>현장에서 추가구매 가능합니다. (단, 10% DC 적용 안됨)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation-footer">
+                        <div class="row align-items-center g-0">
+                            <div class="col d-none d-lg-block">
+                                <div class="contact">
+                                    <i class="icon-phone"></i>
+                                    <span>문의/예약</span>
+                                    <a href="tel:01047240390">010 4724 0390</a>
+                                </div>
+                            </div>
+                            <div class="col col-lg-auto">
+                                <button type="button" class="btn btn-brown btn-lg btn-back" onclick="stepPrev()">이전</button>
+                            </div>
+                            <div class="col col-lg-auto">
+                                <button type="button" class="btn btn-primary btn-lg btn-next" onclick="stepNext()">다음</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var current = $('ol.step > li.active').index()
+        var stepLength = $('ol.step > li').length - 1;
+
+        function stepPrev() {
+            console.log(current);
+            if (current > 0) {
+                current = current - 1;
+                $('ol.step > li').removeClass('active');
+                $('ol.step > li').eq(current).addClass('active');
+                $('[class^="package-step"]').hide();
+                $('[class^="package-step"]').eq(current).show();
+            } else {
+                console.log('처음');
+            }
+        }
+
+        function stepNext() {
+            console.log(current);
+            if (current < stepLength) {
+                current = current + 1;
+                $('ol.step > li').removeClass('active');
+                $('ol.step > li').eq(current).addClass('active');
+                $('[class^="package-step"]').hide();
+                $('[class^="package-step"]').eq(current).show();
+            } else {
+                console.log('마지막');
+            }
+        }
+    </script>
+
+    <script>
+        var fullpage = $('#content').fullpage({
+            anchors: ['section0', 'section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7'],
+            navigationTooltips: ['HOME', '패키지', '하루일정', '우리선장님', '월척갤러리', 'FAQ', '주변여행지', '찾아오시는 길'],
+            sectionsColor: ['#e1eaef'],
+            navigation: true,
+            navigationPosition: 'left',
+            keyboardScrolling: true,
+            responsiveHeight: 920,
+            afterRender: function() {
+
+            },
+            afterLoad: function(origin, destination, direction) {
+                if (destination !== 1) {
+                    $('html').addClass('banner-collapsed');
+                } else {
+                    $('html').removeClass('banner-collapsed');
+                }
+            },
+            onLeave: function(origin, destination, direction) {
+                if (destination == 2 && direction == 'down') {
+                    $('html').addClass('banner-collapsed');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

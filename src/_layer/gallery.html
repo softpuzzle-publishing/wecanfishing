@@ -1,0 +1,71 @@
+<div class="modal layer" tabindex="-1" id="modal-gallery">
+    <button type="button" class="btn-close" aria-label="레이어 닫기" data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="gallery">
+                <h1 class="gallery-title">4월 첫째주 갤러리</h1>
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        @@for (var i = 1; i < 24; i++) {
+                        <div class="swiper-slide">
+                            <img src="assets/images/gallery-`+i+`.jpg" class="card-img-top" alt="">
+                        </div>
+                        }
+                    </div>
+                    <div class="swiper-button-next swiper-button-next-gallery"></div>
+                    <div class="swiper-button-prev swiper-button-prev-gallery"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        @@for (var i = 1; i < 24; i++) {
+                        <div class="swiper-slide">
+                            <img src="assets/images/gallery-`+i+`.jpg" class="card-img-top" alt="">
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var galleryModal = document.getElementById('modal-gallery');
+    galleryModal.addEventListener('show.bs.modal', function (event) {
+        setTimeout(function(){
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 16,
+                slidesPerView: 6,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    991: {
+                        slidesPerView: 5,
+                        spaceBetween: 15,
+                        freeMode: true,
+                    },
+                    768: {
+                        slidesPerView: 5,
+                        spaceBetween: 8,
+                        freeMode: true,
+                    }
+                }
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                slideToClickedSlide: true,
+                navigation: {
+                    nextEl: '.swiper-button-next-gallery',
+                    prevEl: '.swiper-button-prev-gallery',
+                },
+                thumbs: {
+                    swiper: galleryThumbs,
+                },
+                observer: true,
+                observeSlideChildren: true,
+                observeParents: true
+            });
+        },10);
+    })
+</script>
