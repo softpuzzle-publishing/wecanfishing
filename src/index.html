@@ -39,7 +39,7 @@
                     <div class="reservation-list">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                @@for (var i = 1; i < 11; i++) {
+                                @@for (var i = 1; i < 7; i++) {
                                 <div class="swiper-slide">
                                     <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
                                 </div>
@@ -59,7 +59,7 @@
                                     disableOnInteraction: false
                                 },
                                 loop: true,
-                                speed: 10000,
+                                speed: 6000,
                                 autoHeight: true,
                             });
                         </script>
@@ -69,6 +69,11 @@
         </div>
         <header id="header">
             <h1 class="logo"><a href="/"><img src="assets/images/logo.svg" alt="We Can 피싱 로고"></a></h1>
+            <div class="contact-fixed">
+                <i class="icon-phone"></i>
+                <span>문의/예약</span>
+                <strong><a href="tel:01047240390">010 4724 0390</a></strong>
+            </div>
         </header>
         <div id="container">
             <main id="content">
@@ -169,9 +174,9 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-prev swiper-button-next-main"></div>
-                                        <div class="swiper-button-next swiper-button-prev-main"></div>
+                                        <div class="swiper-pagination swiper-pagination-main"></div>
+                                        <div class="swiper-button-prev swiper-button-prev-main"></div>
+                                        <div class="swiper-button-next swiper-button-next-main"></div>
                                     </div>
                                     <script>
                                         const mainSwiper = new Swiper('.main-slider .swiper-container', {
@@ -180,7 +185,7 @@
                                                 prevEl: '.swiper-button-prev-main',
                                             },
                                             pagination: {
-                                                el: '.swiper-pagination',
+                                                el: '.swiper-pagination-main',
                                                 type: 'bullets',
                                             },
                                             observer: true,
@@ -201,7 +206,7 @@
                         <div class="package-info">
                             <div class="row gy-3 gy-lg-0">
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-family.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">가족전용 추천패키지</h5>
@@ -210,7 +215,7 @@
                                     </a>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-couple.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">연인전용 추천패키지</h5>
@@ -219,7 +224,7 @@
                                     </a>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-group.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">단체전용 추천패키지</h5>

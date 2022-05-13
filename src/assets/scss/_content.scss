@@ -107,8 +107,9 @@
         .swiper-pagination-bullet{width: 6px;height: 6px;border-radius: 50rem;background: #fff;vertical-align: middle;opacity: 1;margin: 0 6px;}
         .swiper-pagination-bullet-active{background: transparent;border: 3px solid #fff;width: 16px;height: 16px;}
     }
-    .swiper-button-next, .swiper-button-prev{bottom: 40px;background-size: contain;width: 30px;height: 30px;top: auto;}
-    .swiper-button-prev{background-image: url('../images/btn-slide-arrow-prev.svg');right: 100px;left: auto;}
+    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{pointer-events: auto;}
+    .swiper-button-next, .swiper-button-prev{bottom: 30px;background-size: 30px;width: 50px;height: 50px;top: auto;}
+    .swiper-button-prev{background-image: url('../images/btn-slide-arrow-prev.svg');right: 95px;left: auto;}
     .swiper-button-next{background-image: url('../images/btn-slide-arrow-next.svg');right: 45px;}
     @include media-breakpoint-down(xxl){
         .item{
@@ -119,7 +120,7 @@
         }
         .sticker{right: 30px;top: 30px;}
         .swiper-pagination{bottom: 20px;left: 30px;}
-        .swiper-button-prev{bottom: 15px;right: 70px;}
+        .swiper-button-prev{bottom: 15px;right: 65px;}
         .swiper-button-next{bottom: 15px;right: 15px;}
     }
     @include media-breakpoint-down(md){

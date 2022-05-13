@@ -109,34 +109,6 @@
                                     <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
                                 </div>
 
-                                <div class="swiper-slide">
-                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="item"><i>예약대기</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="item"><i class="ok">예약완료</i><span>11월 11일(수) 박정식</span></div>
-                                </div>
-
                             </div>
                         </div>
                         <script>
@@ -149,7 +121,7 @@
                                     disableOnInteraction: false
                                 },
                                 loop: true,
-                                speed: 10000,
+                                speed: 6000,
                                 autoHeight: true,
                             });
                         </script>
@@ -159,6 +131,11 @@
         </div>
         <header id="header">
             <h1 class="logo"><a href="/"><img src="assets/images/logo.svg" alt="We Can 피싱 로고"></a></h1>
+            <div class="contact-fixed">
+                <i class="icon-phone"></i>
+                <span>문의/예약</span>
+                <strong><a href="tel:01047240390">010 4724 0390</a></strong>
+            </div>
         </header>
         <div id="container">
             <main id="content">
@@ -259,9 +236,9 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="swiper-pagination"></div>
-                                        <div class="swiper-button-prev swiper-button-next-main"></div>
-                                        <div class="swiper-button-next swiper-button-prev-main"></div>
+                                        <div class="swiper-pagination swiper-pagination-main"></div>
+                                        <div class="swiper-button-prev swiper-button-prev-main"></div>
+                                        <div class="swiper-button-next swiper-button-next-main"></div>
                                     </div>
                                     <script>
                                         const mainSwiper = new Swiper('.main-slider .swiper-container', {
@@ -270,7 +247,7 @@
                                                 prevEl: '.swiper-button-prev-main',
                                             },
                                             pagination: {
-                                                el: '.swiper-pagination',
+                                                el: '.swiper-pagination-main',
                                                 type: 'bullets',
                                             },
                                             observer: true,
@@ -291,7 +268,7 @@
                         <div class="package-info">
                             <div class="row gy-3 gy-lg-0">
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-family.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">가족전용 추천패키지</h5>
@@ -300,7 +277,7 @@
                                     </a>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-couple.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">연인전용 추천패키지</h5>
@@ -309,7 +286,7 @@
                                     </a>
                                 </div>
                                 <div class="col-12 col-md">
-                                    <a href="#" class="card text-white">
+                                    <a href="#modal-full" data-bs-toggle="modal" class="card text-white">
                                         <img src="assets/images/bg-package-group.png" class="card-img" alt="">
                                         <div class="card-img-overlay">
                                             <h5 class="card-title">단체전용 추천패키지</h5>
@@ -1244,7 +1221,7 @@
                     <img src="../assets/images/top-banner-icon-1-white.svg" alt="">
                     <h1>우리 모두 <span class="text-primary">만선</span> 위킨피싱</h1>
                     <p class="desc">베테랑 경력의 우리 선장님과 함께라면 우리모두 만선! <br>계절과 물때에 맞게 쭈꾸미, 우럭 등 제철 물고기 맞춤형 배낚시 <br>안전과 친절함은 기본제공</p>
-                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <a href="#modal-reservation" data-bs-toggle="modal" class="btn btn-lg btn-outline-white">예약하기</a>
                     <div class="imgs">
                         <div class="img"><img src="assets/images/img-service-full-1.png" alt=""></div>
                         <div class="img"><img src="assets/images/img-service-full-2.png" alt=""></div>
@@ -1262,7 +1239,7 @@
                     <img src="../assets/images/top-banner-icon-2-white.svg" alt="">
                     <h1><span class="text-primary">회</span>도 먹고 <span class="text-primary">고기</span>도 먹고!!</h1>
                     <p class="desc">직접잡은 물고기 회와 바비큐 만찬 식도락 여행의 끝판왕 <br>※셀프식당에서 고기구매 및 상차림비용을 지불 후 이용할 수 있습니다. <br>(밑반찬, 쌈채소, 불판 등 제공)</p>
-                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <a href="#modal-reservation" data-bs-toggle="modal" class="btn btn-lg btn-outline-white">예약하기</a>
                     <div class="imgs">
                         <div class="img"><img src="assets/images/img-service-meal-1.png" alt=""></div>
                         <div class="img"><img src="assets/images/img-service-meal-2.png" alt=""></div>
@@ -1280,7 +1257,7 @@
                     <img src="../assets/images/top-banner-icon-3-white.svg" alt="">
                     <h1><span class="text-primary">선상</span>에서 <span class="text-primary">커피</span> 한 잔</h1>
                     <p class="desc">서해안의 낙조를 바라보며 분위기있게 커피 한 잔~ <br>일상의 스트레스를 날려버릴 압도적인 분위기 <br>가족, 연인, 친구 모두에게 강추~</p>
-                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <a href="#modal-reservation" data-bs-toggle="modal" class="btn btn-lg btn-outline-white">예약하기</a>
                     <div class="imgs">
                         <div class="img"><img src="assets/images/img-service-coffee-1.png" alt=""></div>
                         <div class="img"><img src="assets/images/img-service-coffee-2.png" alt=""></div>
@@ -1298,7 +1275,7 @@
                     <img src="../assets/images/top-banner-icon-4-white.svg" alt="">
                     <h1>해산물 <span class="text-primary">쇼핑</span></h1>
                     <p class="desc">어머! 이건 꼭 사야해~ <br>서해안의 모든 해산물이 다 모였다! <br>당일 직접 잡은 해산물 직거래! 살수록 이득!</p>
-                    <a href="" class="btn btn-lg btn-outline-white">예약하기</a>
+                    <a href="#modal-reservation" data-bs-toggle="modal" class="btn btn-lg btn-outline-white">예약하기</a>
                     <div class="imgs">
                         <div class="img"><img src="assets/images/img-service-shopping-1.png" alt=""></div>
                         <div class="img"><img src="assets/images/img-service-shopping-2.png" alt=""></div>
